@@ -1,0 +1,38 @@
+So this is my first note on this project. I am going to talk about textures and these paths.
+
+This bugged for me about 2 days and i went to discord to find out that i set my paths wrong.
+In VS Code for debugger what i've done is that in my launch.json file:
+
+I set "cwd": "${workspaceFolder}" (Well this is wrong)
+It should be -> "cwd": "${workspaceFolder}/build"
+
+And also i should talk about the order of rendering stuff onto the screen.
+
+                        clearScreen()
+                            |
+                            V
+                        displayScreen()
+                            |
+                            V
+                        render()
+                            |
+                            V
+                          other stuff...
+
+Well this is wrong and the correct order is:
+
+                        clearScreen()
+                            |
+                            V
+                        render()
+                            |
+                            V
+                        displayScreen()
+                            |
+                            V
+                          other stuff...
+
+This made my day even harder and luckily someone on discord found the problem (the order and paths). someone
+yea atleast i was able to learn something now
+
+
