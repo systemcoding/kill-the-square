@@ -1,1 +1,0 @@
-C:\Dev\sdl-windows-build\x64\Debug\sdl-windows-build.exe
